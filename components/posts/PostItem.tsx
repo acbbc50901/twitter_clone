@@ -39,7 +39,7 @@ const PostItem: React.FC<Props> = ({userId, data}) => {
       return null
     }
     return formatDistanceToNowStrict(new Date(data.createdAt));
-  }, [data.createAt])
+  }, [data?.createdAt])
 
   const LikeIcon = hasLiked ? AiFillHeart : AiOutlineHeart;
 

@@ -1,6 +1,6 @@
 import {NextApiRequest, NextApiResponse} from 'next';
 import bcrypt from 'bcrypt'
-import prisma from '../../../lib/prismadb'
+import prisma from '@/lib/prismadb'
 import serverAuth from '@/lib/serverAuth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
