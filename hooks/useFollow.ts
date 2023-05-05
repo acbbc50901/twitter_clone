@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from 'react'
 import useSWR from 'swr'
-import fetcher from '@/lib/fetcher'
+import fetcher from '@/libs/fetcher'
 import useCurrentUser from './useCurrentUser'
 import useUser from './useUser'
 import useLoginModal from './useLoginModal'
