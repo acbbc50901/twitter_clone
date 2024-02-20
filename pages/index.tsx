@@ -5,8 +5,8 @@ import PostFeed from "@/components/PostFeed"
 export default function Home() {
   return (
     <>
-      <Header label='Home'/>
-      <Form placeholder="What's happening"/>
+      <Header label='首頁'/>
+      <Form placeholder="想分享點事情嗎"/>
       <PostFeed/>
     </>
   )

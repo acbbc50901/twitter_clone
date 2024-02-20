@@ -11,19 +11,19 @@ export const Sidebar = () => {
   const { data: currentUser} = useCurrentUser();
   const items = [
     {
-      label: 'Home',
+      label: '首頁',
       href: '/',
       icon: BsHouseFill,
     },
     {
-      label: 'Notifications',
+      label: '提醒',
       href: '/notifications',
       icon: BsBellFill,
       auth: true,
       alert: currentUser?.hasNotification,
     },
     {
-      label: 'Profile',
+      label: '個人資料',
       href: `/users/${currentUser?.id}`,
       icon: FaUser,
       auth: true,
@@ -36,11 +36,12 @@ export const Sidebar = () => {
           <SidebarLogo/>
           {items.map((item) => <SidebarItem alert={item.alert} key={item.label} href={item.href} label={item.label} icon={item.icon} auth={item.auth}/>)}
           {
-            currentUser && (
-              <SidebarItem icon={BiLogOut} onClick={() => signOut()} label='Logout'/>
+            currentUser ? (
+              <SidebarItem icon={BiLogOut} onClick={() => signOut()} label='登出'/>
+            ) : (
+              <SidebarTwitterButton/>
             )
           }
-          <SidebarTwitterButton/>
         </div>
       </div>
     </div>

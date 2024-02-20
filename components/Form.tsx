@@ -65,10 +65,10 @@ const Form: React.FC<Props> = ({placeholder, isComment, postId}) => {
           </div>
         ) : (
           <div className='py-8'>
-            <h1 className='text-white text-2xl text-center mb-4 font-bold'>Welcome to Fwitter</h1>
+            <h1 className='text-white text-2xl text-center mb-4 font-bold'>歡迎來到 Fwitter</h1>
             <div className='flex flex-row items-center justify-center gap-4'>
-              <Button label='Login' onClick={loginModal.onOpen}/>
-              <Button label='Register' onClick={registerModal.onOpen} secondary/>
+              <Button label='登入' onClick={loginModal.onOpen}/>
+              <Button label='註冊' onClick={registerModal.onOpen} secondary/>
             </div>
           </div>
         )

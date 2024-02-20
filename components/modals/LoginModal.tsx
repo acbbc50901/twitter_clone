@@ -38,19 +38,19 @@ const LoginModal = () => {
 
   const bodyContent = (
     <div className=' flex flex-col gap-4'>
-      <Input placeholder='Email' value={email} disabled={isLoading} onChange={(e) => setEmail(e.target.value)}/>
-      <Input placeholder='Password' type='password' value={password} disabled={isLoading} onChange={(e) => setPassword(e.target.value)}/>
+      <Input placeholder='信箱' value={email} disabled={isLoading} onChange={(e) => setEmail(e.target.value)}/>
+      <Input placeholder='密碼' type='password' value={password} disabled={isLoading} onChange={(e) => setPassword(e.target.value)}/>
     </div>
   )
   const footerContent = (
     <div className=' text-neutral-400 text-center mt-4'>
-      <p>First time using Fwitter?
-        <span onClick={onToggle} className=' text-white cursor-pointer hover:underline'>Cerate an account</span>
+      <p>第一次使用嗎？
+        <span onClick={onToggle} className=' text-white cursor-pointer hover:underline'>創建一個帳號</span>
       </p>
     </div>
   )
   return (
-    <Model disabled={isLoading} isOpen={loginModal.isOpen} title='Login' actionLabel='Sign in' onClose={loginModal.onClose} onSubmit={onSubmit} body={bodyContent}
+    <Model disabled={isLoading} isOpen={loginModal.isOpen} title='登入' actionLabel='登入' onClose={loginModal.onClose} onSubmit={onSubmit} body={bodyContent}
     footer={footerContent}/>
   )
 }

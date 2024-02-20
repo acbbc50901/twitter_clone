@@ -29,7 +29,7 @@ const UserBio: React.FC<Props> = ({userId}) => {
       <div className='flex justify-end p-2'>
         {
           currentUser?.id === userId ? (
-            <Button secondary label='Edit' onClick={editModal.onOpen}/>
+            <Button secondary label='編輯' onClick={editModal.onOpen}/>
           ) : (
             <Button secondary={!isFollowing} outline={isFollowing} label={isFollowing ? 'Unfollow' : 'Follow'} onClick={toggleFollow}/>
           )
@@ -49,11 +49,11 @@ const UserBio: React.FC<Props> = ({userId}) => {
           <div className=' flex flex-row items-center mt-4 gap-6'>
             <div className='flex flex-row items-center gap-1'>
               <p className='text-white'> {fetchedUser?.followingIds?.length} </p>
-              <p className=' text-neutral-500'> Following</p>
+              <p className=' text-neutral-500'> 追蹤人數</p>
             </div>
             <div className='flex flex-row items-center gap-1'>
               <p className='text-white'> {fetchedUser?.followersCount || 0} </p>
-              <p className=' text-neutral-500'> Followers</p>
+              <p className=' text-neutral-500'> 追蹤者人數</p>
             </div>
           </div>
         </div>

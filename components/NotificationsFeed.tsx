@@ -13,7 +13,7 @@ const NotificationsFeed = () => {
   
   if (fetchedNotifications.length === 0) {
     return (
-      <div className=' text-neutral-600 text-center p-6 text-xl'> No notifications </div>
+      <div className=' text-neutral-600 text-center p-6 text-xl'> 無任何提醒 </div>
     )
   }
   return (

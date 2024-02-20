@@ -49,16 +49,16 @@ const EditModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Input placeholder="Name" onChange={(e) => setName(e.target.value)} value={name} disabled={isLoading}/>
-      <Input placeholder="UserName" onChange={(e) => setUsername(e.target.value)} value={username} disabled={isLoading}/>
-      <Input placeholder="Bio" onChange={(e) => setBio(e.target.value)} value={bio} disabled={isLoading}/>
-      <ImageUpload onChange={(img) => setProfileImage(img)} value={profileImage} disabled={isLoading} label='Upload Profile image'/>
-      <ImageUpload onChange={(img) => setCoverImage(img)} value={coverImage} disabled={isLoading} label='Upload Cover image'/>
+      <Input placeholder="名稱" onChange={(e) => setName(e.target.value)} value={name} disabled={isLoading}/>
+      <Input placeholder="帳號名稱" onChange={(e) => setUsername(e.target.value)} value={username} disabled={isLoading}/>
+      <Input placeholder="留言板" onChange={(e) => setBio(e.target.value)} value={bio} disabled={isLoading}/>
+      <ImageUpload onChange={(img) => setProfileImage(img)} value={profileImage} disabled={isLoading} label='上傳使用者照片'/>
+      <ImageUpload onChange={(img) => setCoverImage(img)} value={coverImage} disabled={isLoading} label='上傳背景圖片'/>
     </div>
   ) 
 
   return(
-    <Model disabled={isLoading} isOpen={editModal.isOpen} title="Edit your profile" actionLabel="Save" onClose={editModal.onClose} onSubmit={onSubmit}
+    <Model disabled={isLoading} isOpen={editModal.isOpen} title="編輯你的個人資料" actionLabel="儲存" onClose={editModal.onClose} onSubmit={onSubmit}
     body={bodyContent}/>
   )
 }
